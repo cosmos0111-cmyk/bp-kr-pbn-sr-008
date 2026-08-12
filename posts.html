@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (1/3) · kr-pbn-sr-008</title>
+  <meta name="description" content="kr-pbn-sr-008에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://sangsu-restaurant-startup.link-hub.org/posts.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ *, *::before, *::after {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+ html {
+ scroll-behavior: smooth;
+ font-size: 16px;
+ }
+ body {
+ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+ line-height: 1.6;
+ color: #1a1a1a;
+ background-color: #faf9f7;
+ }
+ .container {
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 0 20px;
+ }
+ nav {
+ background: #ffffff;
+ border-bottom: 1px solid #e5e3df;
+ position: sticky;
+ top: 0;
+ z-index: 100;
+ box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+ }
+ nav .container {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ height: 64px;
+ }
+ .nav-logo {
+ font-size: 1.25rem;
+ font-weight: 700;
+ letter-spacing: -0.02em;
+ color: #1a1a1a;
+ text-decoration: none;
+ }
+ .nav-links {
+ display: flex;
+ gap: 32px;
+ align-items: center;
+ }
+ .nav-links a {
+ text-decoration: none;
+ color: #4a4a4a;
+ font-size: 0.9375rem;
+ font-weight: 500;
+ transition: color 0.2s ease;
+ }
+ .nav-links a:hover {
+ color: #c73e3e;
+ }
+ .hamburger {
+ display: none;
+ flex-direction: column;
+ gap: 5px;
+ cursor: pointer;
+ padding: 8px;
+ background: none;
+ border: none;
+ }
+ .hamburger span {
+ width: 24px;
+ height: 2px;
+ background: #1a1a1a;
+ border-radius: 2px;
+ transition: all 0.3s ease;
+ }
+ header {
+ background: linear-gradient(135deg, #f5f0eb 0%, #ede6dc 100%);
+ padding: 80px 0 60px;
+ text-align: center;
+ border-bottom: 1px solid #e5e3df;
+ }
+ header .container h1 {
+ font-size: 2.75rem;
+ font-weight: 800;
+ letter-spacing: -0.03em;
+ color: #1a1a1a;
+ margin-bottom: 16px;
+ line-height: 1.15;
+ }
+ header .container p {
+ font-size: 1.125rem;
+ color: #5a5a5a;
+ max-width: 680px;
+ margin: 0 auto;
+ font-weight: 400;
+ }
+ @media (max-width: 768px) {
+ .nav-links {
+ display: none;
+ position: absolute;
+ top: 64px;
+ left: 0;
+ right: 0;
+ background: #ffffff;
+ flex-direction: column;
+ padding: 20px;
+ gap: 16px;
+ border-bottom: 1px solid #e5e3df;
+ box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+ }
+ .nav-links.active {
+ display: flex;
+ }
+ .hamburger {
+ display: flex;
+ }
+ header {
+ padding: 60px 0 40px;
+ }
+ header .container h1 {
+ font-size: 2rem;
+ }
+ header .container p {
+ font-size: 1rem;
+ }
+ }
+ .info-grid {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 32px;
+ padding: 60px 0;
+ }
+ @media (max-width: 768px) {
+ .info-grid {
+ grid-template-columns: 1fr;
+ gap: 24px;
+ padding: 40px 0;
+ }
+ }
+ .info-card {
+ background: #ffffff;
+ border-radius: 12px;
+ padding: 32px;
+ border: 1px solid #e5e3df;
+ box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+ }
+ .info-card h2 {
+ font-size: 1.25rem;
+ font-weight: 700;
+ margin-bottom: 16px;
+ color: #1a1a1a;
+ letter-spacing: -0.02em;
+ }
+ .info-card p, .info-card li {
+ font-size: 0.9375rem;
+ color: #4a4a4a;
+ line-height: 1.7;
+ }
+ .info-card ul {
+ list-style: none;
+ padding: 0;
+ }
+ .info-card ul li {
+ padding: 8px 0;
+ border-bottom: 1px solid #f0eeea;
+ display: flex;
+ align-items: flex-start;
+ gap: 8px;
+ }
+ .info-card ul li:last-child {
+ border-bottom: none;
+ }
+ .info-card ul li::before {
+ content: "·";
+ color: #c73e3e;
+ font-weight: 700;
+ flex-shrink: 0;
+ }
+ .stat-badge {
+ display: inline-block;
+ background: #f5f0eb;
+ padding: 4px 12px;
+ border-radius: 20px;
+ font-size: 0.8125rem;
+ font-weight: 600;
+ color: #5a5a5a;
+ margin-right: 6px;
+ margin-bottom: 6px;
+ }
+ .tel-link {
+ color: #c73e3e;
+ text-decoration: none;
+ font-weight: 600;
+ }
+ .tel-link:hover {
+ text-decoration: underline;
+ }
+ footer {
+ background: #1a1a1a;
+ color: #a0a0a0;
+ padding: 40px 0;
+ text-align: center;
+ font-size: 0.875rem;
+ }
+ footer a {
+ color: #c0c0c0;
+ text-decoration: none;
+ }
+ footer a:hover {
+ color: #ffffff;
+ }
+ </style>
+  <meta property="og:title" content="글 목록 (1/3) · kr-pbn-sr-008">
+  <meta property="og:description" content="kr-pbn-sr-008에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://sangsu-restaurant-startup.link-hub.org/posts.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header>
+ <div class="container">
+ <h1>상수동 핫플 상세 정보</h1>
+ <p>데이터 기반으로 분석한 상수동 지역 정보와 방문 가이드. 교통, 주차, 운영시간 등 실제 방문에 필요한 모든 정보를 제공합니다.</p>
+ </div>
+ </header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 42개 · 1/3 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260704-114.html">상수 핫플 솔직후기 – 지역 상수 정보 안내</a>
+        <p class="post-item__summary">상수 지역의 핫플에 대한 솔직후기 정보를 찾아보시는 분들은 주로 어떤 정보를 원할까요. 상수는 독특한 분위기의 장소들이 모여 있는 지역으로, 새로운 경험을 찾아보는 사람들이 꾸준히 찾고 있습니다. </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-1161.html">상수 핫플 솔직후기 관점에서 본 마포 럭셔리 단체 가라오케 예약 가이드</a>
+        <p class="post-item__summary">상수 핫플 솔직후기를 확인할 때 먼저 볼 부분은 화려한 문구가 아니라 실제로 비교 가능한 조건입니다. 상수 주변 정보는 비슷한 표현이 많아서, 어떤 기준으로 읽느냐에 따라 판단의 정확도가 크게 달라</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-342.html">상수 핫플 솔직후기 주요 동향과 정보 분석</a>
+        <p class="post-item__summary">현대 사회에서 로컬 커뮤니티 정보의 신뢰성은 매우 중요합니다. 그중에서도 상수 핫플 솔직후기 관련 소식은 많은 이들이 활발히 탐색하는 영역이며, 상세한 서비스 비교와 검증이 필수로 요구됩니다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0235.html">상수 핫플 솔직후기 마포 홍대 단체 가라오케 예약 가이드 합정 가라오케 정보</a>
+        <p class="post-item__summary">넓은 공간 확보, 최신 음향 시설 구비, 합리적인 이용료 등 단체 모임을 위한 장소는 충족해야 할 조건이 많습니다. 상수 핫플 솔직후기 내용을 살펴보면 단순히 분위기만 좋아서는 단체 회식이나 파티를</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0236.html">상수 핫플 솔직후기 구글 알고리즘 고신용 도메인 보증 카드 발급 금융 활용</a>
+        <p class="post-item__summary">웹사이트 운영자라면 누구나 한 번쯤은 검색 엔진 노출 최적화와 도메인 신뢰도에 대해 고민해 보셨을 것입니다. 상수 핫플 솔직후기를 작성하는 블로그라도 신뢰도 높은 도메인을 기반으로 운영해야 검색 결</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0237.html">상수 핫플 솔직후기 구글 알고리즘 감점 치료 및 백링크 수술실 이용 안내</a>
+        <p class="post-item__summary">최근 상수 핫플 솔직후기 관련 키워드를 분석하다 보면 검색 엔진의 알고리즘 변화에 민감하게 반응해야 할 필요성을 느낍니다. 갑작스러운 노출 저하는 단순히 콘텐츠의 질 문제일 수도 있으나, 기술적인 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0238.html">상수 핫플 솔직후기 기준에서 바라본 셔츠룸 예약 및 가격 판단 가이드</a>
+        <p class="post-item__summary">인터넷 커뮤니티에 올라오는 상수 핫플 솔직후기 내용처럼, 유흥 문화 소비에 있어서도 개인의 주관적인 경험과 객관적인 정보를 분리하는 혜안이 필요합니다. 특히 셔츠룸과 같은 프라이빗한 공간을 찾을 때</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0239.html">상수 핫플 솔직후기 분석으로 보는 마포 단체 회식용 대형 룸 노래방 가격 정보</a>
+        <p class="post-item__summary">상수 핫플 솔직후기 게시판에서 종종 보이는 회식 관련 실패담은 대부분 사전 조사의 부재에서 기인합니다. 단체 인원이 이동해야 하는 비즈니스 회식은 고려해야 할 변수가 많기 때문에, 무작정 방문하기보</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0240.html">상수 핫플 솔직후기 응용 무인 마케팅 4</a>
+        <p class="post-item__summary">최근 상수 핫플 솔직후기 데이터를 수집하고 분석하는 과정에서 자동화 툴의 중요성을 실감하는 사람들이 늘고 있습니다. 단순 반복 작업에서 벗어나 무인 마케팅 시스템을 구축하려는 이들에게 효율적인 환경</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0241.html">상수 핫플 솔직후기: 1급수 백링크 주스 서비스 초심자 주의점</a>
+        <p class="post-item__summary">새로운 마케팅 도구인 '마르지 않는 1급수 백링크 주스 공급 서비스'에 대해 많은 분들이 관심을 가지고 계십니다. 특히 상수동과 같이 트렌디한 지역에서 핫플레이스처럼 빠르게 입소문을 타는 콘텐츠 급</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0242.html">상수 핫플 솔직후기: 마포 셔츠룸 예약 시 눈탱이 방지 꿀팁</a>
+        <p class="post-item__summary">마포 셔츠룸을 이용할 때 '눈탱이'를 맞을까 걱정하는 분들이 많습니다. 특히 처음 방문하는 경우, 어떤 부분을 주의해야 할지 막막할 수 있습니다. 흔히 늦은 시간일수록 더 많은 비용을 요구할 것이라</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0243.html">상수 핫플 솔직후기: 도메인 지수 탈모 방지 인원 구성 가이드</a>
+        <p class="post-item__summary">디지털 마케팅 분야에서 '도메인 지수'의 중요성은 날로 커지고 있으며, 마치 탈모처럼 이를 관리하지 않으면 심각한 결과를 초래할 수 있다는 인식이 확산되고 있습니다. 특히 개인 또는 소규모 팀으로 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0244.html">상수 핫플 솔직후기: 구글 인덱싱 속도 업체 비교 기준</a>
+        <p class="post-item__summary">최근 많은 웹사이트 운영자들이 구글 인덱싱 속도 향상에 큰 관심을 기울이고 있습니다. 콘텐츠를 제작하더라도 구글 검색 결과에 빠르게 노출되지 않으면 그 효과가 반감되기 때문입니다. 그렇다면 구글 인</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0245.html">상수 핫플 솔직후기 기반 구글 신뢰 지수 모발이식 솔루션 분석</a>
+        <p class="post-item__summary">최근 온라인에서 접하는 상수 핫플 솔직후기 콘텐츠는 소비자들에게 중요한 판단 지표가 됩니다. 정보의 홍수 속에서 특정 분야의 신뢰도를 결정짓는 알고리즘 역시 이와 유사한 논리를 따릅니다. 검색 엔진</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0246.html">상수 핫플 솔직후기 기반 동대문 마사지 선택 가이드</a>
+        <p class="post-item__summary">상수 핫플 솔직후기를 찾아보는 이들이라면 자신의 취향에 맞는 공간을 고르는 안목이 높을 것이다. 공간의 분위기만 고려할 것인지, 아니면 실질적인 서비스 품질과 접근성을 우선할 것인지에 따라 만족도는</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0247.html">상수 핫플 솔직후기 방식 차용한 마포 셔츠룸 리얼 후기 소셜 마케팅 가이드 노하우</a>
+        <p class="post-item__summary">마케팅 현장에서 흔히 범하는 실수는 타깃의 목소리를 듣지 않고 공급자의 관점만을 고집하는 것입니다. 상수 핫플 솔직후기 사례처럼 대중의 반응을 분석하는 일은 모든 홍보의 기초가 됩니다. 초기 기획 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0155.html">상수 핫플 솔직후기 기반으로 살펴본 홍대 노래방 추천정보 가이드</a>
+        <p class="post-item__summary">상수 핫플 솔직후기를 찾다 보면 만족도 높은 홍대 노래방 추천정보를 발견할 때가 있습니다. 좋은 노래방의 충족 조건은 첫째로 우수한 음향 환경이며, 둘째는 쾌적한 실내 공간입니다. 많은 이들이 모이</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0156.html">상수 핫플 솔직후기 확인하고 선택하는 공덕 셔츠룸 추천정보 핵심 기준</a>
+        <p class="post-item__summary">혹시 상수 핫플 솔직후기를 보며 새로운 유흥 문화를 고민하고 계신가요? 공덕 지역 셔츠룸을 방문할 계획이라면 가장 먼저 무엇을 고려해야 할지 막막할 수 있습니다. 수많은 업체 사이에서 나에게 맞는 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0157.html">상수 핫플 솔직후기 작성자가 알려주는 연남 유흥 추천정보 가이드</a>
+        <p class="post-item__summary">홍대 인근의 상수 핫플 솔직후기를 꾸준히 기록하다 보면 자연스럽게 연남동 지역의 밤 문화에 대한 관심으로 이어지게 됩니다. 많은 분이 인터넷의 정보를 무비판적으로 수용하여 낭패를 보는 경우가 많아,</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0158.html">상수 핫플 솔직후기로 본 마곡 가라오케 추천정보 가격 분석</a>
+        <p class="post-item__summary">상수 핫플 솔직후기를 다루는 전문가의 시각에서 마곡 지역의 유흥 시설을 바라볼 때, 가장 중요한 것은 가격의 투명성입니다. 많은 이용자가 가라오케를 선택할 때 패키지 구성이 저렴한 곳과 시설이 최신</p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <span class="pager__current">1</span>
+      <a class="pager__link" href="posts-2.html">2</a>
+      <a class="pager__link" href="posts-3.html">3</a>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
